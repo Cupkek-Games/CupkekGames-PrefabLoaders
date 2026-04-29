@@ -1,0 +1,21 @@
+{
+  "name": "com.cupkekgames.prefabloader",
+  "displayName": "CupkekGames PrefabLoader",
+  "version": "0.1.0",
+  "author": {
+    "name": "CupkekGames",
+    "url": "https://www.docs.cupkek.games"
+  },
+  "unity": "6000.0",
+  "documentationUrl": "https://docs.cupkek.games/",
+  "description": "Prefab loading abstraction: IPrefabLoader / PrefabLoader<TKey> base classes plus string-keyed loader. Extracted from CupkekGames Core.",
+  "keywords": [
+    "PrefabLoader",
+    "Prefab",
+    "Asset Loading",
+    "CupkekGames"
+  ],
+  "dependencies": {
+    "com.cupkekgames.keyvaluedatabase": "0.1.0"
+  }
+}
