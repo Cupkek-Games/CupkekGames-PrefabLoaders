@@ -2,7 +2,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace CupkekGames.PrefabLoader.Editor
+namespace CupkekGames.PrefabLoaders.Editor
 {
     [CustomEditor(typeof(PrefabLoaderString), true)]
     public class PrefabLoaderStringEditor : PrefabLoaderEditor<string, GameObject>

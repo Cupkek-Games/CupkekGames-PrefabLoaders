@@ -5,7 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace CupkekGames.PrefabLoader
+namespace CupkekGames.PrefabLoaders
 {
   public interface IPrefabLoader<TKey, TValue> : IKeyValueDatabase<TKey, TValue>, IPrefabLoaderBase
   {

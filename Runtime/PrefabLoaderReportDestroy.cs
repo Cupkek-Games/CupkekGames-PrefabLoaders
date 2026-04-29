@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace CupkekGames.PrefabLoader
+namespace CupkekGames.PrefabLoaders
 {
   public class PrefabLoaderReportDestroy : MonoBehaviour
   {

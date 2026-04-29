@@ -5,7 +5,7 @@ using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace CupkekGames.PrefabLoader.Editor
+namespace CupkekGames.PrefabLoaders.Editor
 {
     public abstract class PrefabLoaderEditor<TKey, TValue> : UnityEditor.Editor
     {

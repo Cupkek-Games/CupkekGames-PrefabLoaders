@@ -1,11 +1,13 @@
 {
-    "name": "CupkekGames.PrefabLoader",
-    "rootNamespace": "CupkekGames.PrefabLoader",
+    "name": "CupkekGames.PrefabLoaders.Editor",
+    "rootNamespace": "CupkekGames.PrefabLoaders.Editor",
     "references": [
-        "GUID:aa6539cffd9044b9aa2dc37aa2c66ef0",
-        "GUID:dced415b883e4520a8a465c931d081e3"
+        "GUID:b8f41375d57f42079c1d8dece8bd7277",
+        "GUID:aa6539cffd9044b9aa2dc37aa2c66ef0"
     ],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,

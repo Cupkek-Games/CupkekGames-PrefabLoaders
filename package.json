@@ -1,7 +1,7 @@
 {
-  "name": "com.cupkekgames.prefabloader",
-  "displayName": "CupkekGames PrefabLoader",
-  "version": "0.1.0",
+  "name": "com.cupkekgames.prefabloaders",
+  "displayName": "CupkekGames PrefabLoaders",
+  "version": "0.1.1",
   "author": {
     "name": "CupkekGames",
     "url": "https://www.docs.cupkek.games"

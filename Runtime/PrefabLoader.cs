@@ -5,7 +5,7 @@ using System.Collections;
 using CupkekGames.KeyValueDatabase;
 using CupkekGames.EditorInspector;
 
-namespace CupkekGames.PrefabLoader
+namespace CupkekGames.PrefabLoaders
 {
   public abstract class PrefabLoader<TKey> : KeyValueDatabaseMono<TKey, GameObject>, IPrefabLoader<TKey, GameObject>
   {
