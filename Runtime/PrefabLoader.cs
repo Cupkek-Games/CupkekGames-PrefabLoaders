@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Collections;
-using CupkekGames.KeyValueDatabase;
+using CupkekGames.KeyValueDatabases;
 using CupkekGames.EditorInspector;
 
 namespace CupkekGames.PrefabLoaders

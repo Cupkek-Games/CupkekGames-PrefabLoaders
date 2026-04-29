@@ -19,4 +19,4 @@ Prefab loading abstraction. Extracted from `com.cupkekgames.core`.
 
 ## Dependencies
 
-- `com.cupkekgames.keyvaluedatabase`
+- `com.cupkekgames.keyvaluedatabases`
