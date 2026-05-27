@@ -20,7 +20,7 @@ namespace CupkekGames.PrefabLoaders
       return _instances[key];
     }
 
-    public GameObject Instantiate(TKey key)
+    public virtual GameObject Instantiate(TKey key)
     {
       if (!ContainsKey(key))
       {
