@@ -15,11 +15,18 @@ namespace CupkekGames.PrefabLoaders
     // Event for unloading UI
     public event EventHandler<TKey> OnInstanceDestroyed;
 
+    /// <summary>Live instances for a key, or null if none exist.</summary>
     public List<GameObject> GetInstances(TKey key)
     {
-      return _instances[key];
+      return _instances.TryGetValue(key, out List<GameObject> list) ? list : null;
     }
 
+    /// <summary>
+    /// Instantiate the prefab registered under <paramref name="key"/>.
+    /// At most one live instance per key: while an instance exists,
+    /// further calls return null. The slot frees when the instance is
+    /// destroyed (tracked via <see cref="PrefabLoaderReportDestroy"/>).
+    /// </summary>
     public virtual GameObject Instantiate(TKey key)
     {
       if (!ContainsKey(key))
@@ -29,25 +36,18 @@ namespace CupkekGames.PrefabLoaders
         return null;
       }
 
-      if (_instances.ContainsKey(key)) return null;
+      if (_instances.ContainsKey(key))
+      {
+        Debug.LogWarning("Instance already exists for key, skipping instantiate: " + key);
+
+        return null;
+      }
 
       GameObject instance = Instantiate(GetValue(key).gameObject);
 
       AddReportDestroy(key, instance);
 
-      List<GameObject> list;
-      if (_instances.ContainsKey(key))
-      {
-        list = _instances[key];
-      }
-      else
-      {
-        list = new();
-      }
-
-      list.Add(instance);
-
-      _instances[key] = list;
+      _instances[key] = new List<GameObject> { instance };
 
       return instance;
     }
@@ -71,10 +71,14 @@ namespace CupkekGames.PrefabLoaders
     {
       yield return new WaitForSeconds(duration);
 
-      List<GameObject> list = _instances[key];
-      foreach (GameObject go in list)
+      // Instances may have been destroyed (and the key removed via
+      // ReportDestroy) during the delay.
+      if (_instances.TryGetValue(key, out List<GameObject> list))
       {
-        Destroy(go);
+        foreach (GameObject go in list)
+        {
+          Destroy(go);
+        }
       }
     }
 
