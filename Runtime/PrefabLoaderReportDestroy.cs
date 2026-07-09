@@ -4,8 +4,8 @@ namespace CupkekGames.PrefabLoaders
 {
   public class PrefabLoaderReportDestroy : MonoBehaviour
   {
-    public object PrefabKey;
-    public IPrefabLoaderBase PrefabLoader;
+    [System.NonSerialized] public object PrefabKey;
+    [System.NonSerialized] public IPrefabLoaderBase PrefabLoader;
     private void OnDestroy()
     {
       // Null when the component was added but never wired up (or the
